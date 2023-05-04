@@ -1,0 +1,27 @@
+.navigation {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+}
+
+.navigation__text {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--black-color);
+}
+
+.navigation__text:hover {
+  cursor: pointer;
+}
+
+.navigation__text_active {
+  font-weight: 500;
+  color: var(--blue-main-color);
+}
+
+.navigation__text_active:hover {
+  cursor: default;
+}

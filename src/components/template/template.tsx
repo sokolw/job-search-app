@@ -1,4 +1,4 @@
-import './template.module.css';
+import styles from './template.module.css';
 
 export const Template = () => {
   return <></>;

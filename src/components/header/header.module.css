@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 24px 0;
+  margin: 0 auto 40px auto;
+}
+
+.header__logo {
+  position: absolute;
+  left: 162px;
+}
+
+@media (max-width: 1200px) {
+  .header {
+    justify-content: space-around;
+  }
+
+  .header__logo {
+    position: relative;
+    left: 0;
+  }
+}

@@ -1,0 +1,6 @@
+.vacancyContainerLayout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 28px;
+}
