@@ -1,0 +1,64 @@
+.inputNumberWithControls {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.input {
+  padding: 8px 28px 8px 12px;
+  border: 1px solid var(--gray-300);
+  border-radius: 8px;
+  width: 275px;
+  height: 42px;
+  transition: all 0.3s linear;
+  color: var(--black-color);
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  caret-color: var(--blue-500-main);
+}
+
+.input:hover {
+  border-color: var(--blue-500-main);
+}
+
+.input:focus {
+  outline: none !important;
+  border-color: var(--blue-500-main);
+}
+
+.input::placeholder {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--gray-500);
+}
+
+.groupControls {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 12px;
+}
+
+.groupControls__increase {
+  width: 12px;
+  height: 12px;
+}
+
+.groupControls__decrease {
+  width: 12px;
+  height: 12px;
+  transform: rotate(180deg);
+}
+
+.groupControls__increase:hover,
+.groupControls__decrease:hover {
+  cursor: pointer;
+}
