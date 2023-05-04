@@ -1,0 +1,140 @@
+.dropdown {
+  position: relative;
+}
+
+.dropdown__title {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--black-color);
+  margin-bottom: 8px;
+}
+
+.select {
+  padding: 8px 12px;
+  border: 1px solid var(--gray-300);
+  border-radius: 8px;
+  width: 275px;
+  transition: all 0.6s;
+  background-color: var(--white-color);
+}
+
+.select:hover {
+  border-color: var(--blue-500-main);
+  cursor: pointer;
+}
+
+.select_active {
+  border-color: var(--blue-500-main);
+}
+
+.select__content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.select__value {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--gray-500);
+}
+
+.select__value_active {
+  color: var(--black-color);
+}
+
+/*Options container*/
+.dropdown__optionsWrapper {
+  padding-right: 4px;
+  border-radius: 8px;
+  background-color: var(--white-color);
+  position: absolute;
+  width: 275px;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+}
+
+.dropdown__optionsWrapper_open {
+  margin-top: 8px;
+  height: 180px;
+  opacity: 1;
+  z-index: 300;
+}
+
+.dropdown__options {
+  border-radius: 8px;
+  height: 180px;
+  overflow-y: auto;
+  background-color: var(--white-color);
+}
+
+.dropdown__options::-webkit-scrollbar {
+  width: 4px;
+}
+
+.dropdown__options::-webkit-scrollbar-track {
+  background: var(--white-color);
+  margin: 12px 0;
+}
+
+.dropdown__options::-webkit-scrollbar-thumb {
+  background: var(--gray-500);
+  border-radius: 2px;
+  transition: all 0.6s;
+}
+
+.dropdown__options::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-600);
+}
+
+/*Option block*/
+.option {
+  width: 100%;
+  padding: 8px;
+  background-color: var(--white-color);
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.option_active {
+  background-color: var(--blue-500-main);
+  padding: 8px 12px;
+}
+
+.option_active:hover {
+  background-color: var(--blue-500-main) !important;
+  cursor: default !important;
+}
+
+.option:hover {
+  background-color: var(--blue-100);
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.option__text {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--black-color);
+}
+
+.option__text_active {
+  font-weight: 500;
+  color: var(--white-color);
+}
