@@ -19,7 +19,7 @@
 
 .navigation__text_active {
   font-weight: 500;
-  color: var(--blue-main-color);
+  color: var(--blue-500-main);
 }
 
 .navigation__text_active:hover {
