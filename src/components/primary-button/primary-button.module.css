@@ -1,0 +1,24 @@
+.primaryButton {
+  background-color: var(--blue-500-main);
+  border: none;
+  border-radius: 8px;
+  color: var(--white-color);
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  transition: all 0.3s linear;
+}
+
+.primaryButton:hover {
+  cursor: pointer;
+}
+
+.primaryButton_hover {
+  background-color: var(--blue-400);
+}
+
+.primaryButton_click {
+  background-color: var(--blue-600);
+}
