@@ -1,0 +1,35 @@
+.textButton {
+  background-color: rgba(0, 0, 0, 0);
+  width: 115px;
+  height: 20px;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.textButton:hover {
+  cursor: pointer;
+}
+
+.textButton__text {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--gray-500);
+}
+
+.textButton__text_hover {
+  color: var(--blue-400);
+}
+
+.textButton__text_click {
+  color: var(--blue-500-main);
+}
+
+.textButton__img {
+}
