@@ -14,7 +14,7 @@ export const SaveButton = (props: SaveButtonType) => {
   const [isActive, setIsActive] = useState(saved);
 
   return (
-    <div
+    <button
       className={styles.saveButton}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
@@ -29,6 +29,6 @@ export const SaveButton = (props: SaveButtonType) => {
         }
         return <img src={grayStarImg} alt='star' />;
       })()}
-    </div>
+    </button>
   );
 };
