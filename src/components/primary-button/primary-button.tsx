@@ -5,10 +5,11 @@ type PrimaryButtonType = {
   width: number;
   height: number;
   content: string;
+  callback: () => void;
 };
 
 export const PrimaryButton = (props: PrimaryButtonType) => {
-  const { width, height, content } = props;
+  const { width, height, content, callback } = props;
   const [isHover, setIsHover] = useState(false);
   const [isClick, setIsClick] = useState(false);
 
@@ -20,7 +21,10 @@ export const PrimaryButton = (props: PrimaryButtonType) => {
       style={{ width, height }}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
-      onMouseDown={() => setIsClick(true)}
+      onMouseDown={() => {
+        setIsClick(true);
+        callback();
+      }}
       onMouseUp={() => setIsClick(false)}
     >
       {content}
