@@ -4,7 +4,12 @@ import blue400CrossImg from './../../assets/icons/blue-400-cross.svg';
 import blue500CrossImg from './../../assets/icons/blue-500-cross.svg';
 import { useState } from 'react';
 
-export const TextButton = () => {
+type TextButtonType = {
+  callback: () => void;
+};
+
+export const TextButton = (props: TextButtonType) => {
+  const { callback } = props;
   const [isHover, setIsHover] = useState(false);
   const [isClick, setIsClick] = useState(false);
 
@@ -13,7 +18,10 @@ export const TextButton = () => {
       className={styles.textButton}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
-      onMouseDown={() => setIsClick(true)}
+      onMouseDown={() => {
+        setIsClick(true);
+        callback();
+      }}
       onMouseUp={() => setIsClick(false)}
     >
       <span
