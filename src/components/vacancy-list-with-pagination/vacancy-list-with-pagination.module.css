@@ -1,0 +1,80 @@
+.vacancyListWithPagination {
+  margin-bottom: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.pagination {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.pagination__pageItem {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--gray-300);
+  background-color: var(--white-color);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination__pageItem:hover {
+  cursor: pointer;
+}
+
+.pagination__pageItem_active {
+  border: none;
+  background-color: var(--blue-500-main);
+}
+
+.pagination__pageItem_disabled {
+}
+.pagination__pageItem_disabled:hover {
+  cursor: default;
+}
+
+.pagination__pageLink {
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 190%;
+  text-align: center;
+  color: var(--black-color);
+}
+
+.pagination__pageLink_active {
+  color: var(--white-color);
+  line-height: 195%;
+}
+
+.pagination__pageLink_previous {
+  width: 100%;
+  height: 100%;
+  background-image: url('/src/assets/icons/chevron.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(180deg);
+}
+
+.pagination__pageLink_next {
+  width: 100%;
+  height: 100%;
+  background-image: url('/src/assets/icons/chevron.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.pagination__pageLink_disabled {
+  filter: brightness(170%);
+}
