@@ -6,10 +6,10 @@ import filledBlueStarImg from './../../assets/icons/filled-blue-star.svg';
 
 type SaveButtonType = {
   saved: boolean;
+  callback: (saved: boolean) => void;
 };
 
-export const SaveButton = (props: SaveButtonType) => {
-  const { saved } = props;
+export const SaveButton = ({ saved, callback }: SaveButtonType) => {
   const [isHover, setIsHover] = useState(false);
   const [isActive, setIsActive] = useState(saved);
 
@@ -18,7 +18,10 @@ export const SaveButton = (props: SaveButtonType) => {
       className={styles.saveButton}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
-      onClick={() => setIsActive(!isActive)}
+      onClick={() => {
+        setIsActive(!isActive);
+        callback(!isActive);
+      }}
     >
       {(() => {
         if (isHover && !isActive) {
