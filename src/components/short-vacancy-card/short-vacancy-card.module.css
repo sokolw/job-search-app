@@ -1,0 +1,74 @@
+.shortVacancyCard {
+  border: 1px solid var(--gray-200);
+  background-color: var(--white-color);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.shortVacancyCard__content {
+}
+
+.shortVacancyCard__title {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--blue-500-main);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.shortVacancyCard__description {
+  margin-bottom: 12px;
+}
+
+.shortVacancyCard__salary {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--black-color);
+}
+
+.shortVacancyCard__condition {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--black-color);
+}
+
+.shortVacancyCard__delimiter {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 21px;
+  color: var(--gray-600);
+  margin: 0 12px;
+}
+
+.shortVacancyCard__location {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+
+.shortVacancyCard__place {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--black-color);
+}
