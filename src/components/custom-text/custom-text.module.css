@@ -1,0 +1,10 @@
+.customText {
+  display: block;
+  width: 235px;
+  text-align: center;
+  font-size: 18px;
+  margin: 0 auto;
+  font-family: 'Inter', cursive;
+  font-weight: 400;
+  font-style: normal;
+}
