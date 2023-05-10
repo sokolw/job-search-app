@@ -1,6 +1,18 @@
 .vacancyContainerLayout {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 28px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 28px;
+  padding: 0 162px;
+  min-height: calc(100vh - 108px);
+}
+
+.vacancyFilterLayout {
+}
+
+.vacancyListLayout {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
