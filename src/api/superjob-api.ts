@@ -55,3 +55,12 @@ export const superjobApi = {
     return instance.get<AxiosResponse<CatalogIndustriesResponse>>(ApiRoutes.CATALOGUES);
   },
 };
+
+export const formattingQueryGetByIds = (ids: number[]) => {
+  const prefix = 'ids';
+  const query = {} as { [key: string]: number };
+  for (const [index, id] of ids.entries()) {
+    query[`${prefix}[${index}]`] = id;
+  }
+  return query;
+};
