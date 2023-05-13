@@ -1,0 +1,10 @@
+.vacancyPage {
+}
+
+.vacancyPage__container {
+  max-width: 725px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
