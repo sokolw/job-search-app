@@ -25,8 +25,20 @@
   margin-bottom: 12px;
 }
 
+.shortVacancyCard__title_additional {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px;
+  color: var(--black-color);
+  margin-bottom: 16px;
+}
+
 .shortVacancyCard__description {
   margin-bottom: 12px;
+}
+
+.shortVacancyCard__description_additional {
+  margin-bottom: 16px;
 }
 
 .shortVacancyCard__salary {
@@ -38,11 +50,25 @@
   color: var(--black-color);
 }
 
+.shortVacancyCard__salary_additional {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--black-color);
+}
+
 .shortVacancyCard__condition {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
+  line-height: 20px;
+  color: var(--black-color);
+}
+
+.shortVacancyCard__condition_additional {
+  font-weight: 400;
+  font-size: 20px;
   line-height: 20px;
   color: var(--black-color);
 }
