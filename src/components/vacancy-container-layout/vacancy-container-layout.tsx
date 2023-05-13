@@ -1,7 +1,7 @@
 import styles from './vacancy-container-layout.module.css';
 import { FilterContainer } from '../filter-container';
 import { SearchField } from '../search-field';
-import { VacancyListWithPagination } from '../vacancy-list-with-pagination';
+import { VacancyListPaginationWithPageRequest } from '../vacancy-list-pagination';
 
 export const VacancyContainerLayout = () => {
   return (
@@ -11,7 +11,7 @@ export const VacancyContainerLayout = () => {
       </div>
       <div className={styles.vacancyListLayout}>
         <SearchField></SearchField>
-        <VacancyListWithPagination></VacancyListWithPagination>
+        <VacancyListPaginationWithPageRequest></VacancyListPaginationWithPageRequest>
       </div>
     </div>
   );
