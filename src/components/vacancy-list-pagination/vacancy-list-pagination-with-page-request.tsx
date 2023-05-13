@@ -1,4 +1,4 @@
-import styles from './vacancy-list-with-pagination.module.css';
+import styles from './vacancy-list-pagination.module.css';
 import { VacancyList } from '../vacancy-list';
 import { useEffect } from 'react';
 import ReactPaginate from 'react-paginate';
@@ -19,7 +19,7 @@ import { Spinner } from '../spinner';
 import { ERR_RESOURCE_NOT_AVAILABLE } from '../../common/constants';
 import { CustomText } from '../custom-text';
 
-export const VacancyListWithPagination = () => {
+export const VacancyListPaginationWithPageRequest = () => {
   const vacanciesStatus = useAppSelector(selectVacanciesStatus);
   const vacancies = useAppSelector(selectVacancies);
   const totalVacancies = useAppSelector(selectTotalVacancies);
@@ -27,8 +27,6 @@ export const VacancyListWithPagination = () => {
 
   const authStatus = useAppSelector(selectAuthStatus);
   const dispatch = useAppDispatch();
-
-  console.log(vacanciesStatus, vacancies, totalVacancies, currentPage);
 
   useEffect(() => {
     if (vacanciesStatus === Status.IDLE) {
