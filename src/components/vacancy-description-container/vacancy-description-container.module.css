@@ -1,0 +1,15 @@
+.vacancyDescriptionContainer {
+  padding: 24px;
+  margin-bottom: 50px;
+  background-color: var(--white-color);
+  border-radius: 12px;
+  border: 1px solid var(--gray-200);
+  font-family: 'Inter';
+  font-size: 16px;
+}
+
+.vacancyDescriptionContainer b {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+}
