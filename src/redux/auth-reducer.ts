@@ -41,7 +41,7 @@ const initState = (): AuthState => {
   return initialState;
 };
 
-export const getAuthData = createAsyncThunk('getAuthData', async (arg, { getState, rejectWithValue, dispatch }) => {
+export const getAuthData = createAsyncThunk('getAuthData', async (_arg, { getState, rejectWithValue, dispatch }) => {
   const state = getState() as RootState;
   try {
     const response = await superjobApi.auth();
@@ -76,7 +76,7 @@ const authSlice = createSlice({
   },
   extraReducers(builder) {
     builder
-      .addCase(getAuthData.pending, (state, action) => {
+      .addCase(getAuthData.pending, (state, _action) => {
         state.status = 'loading';
       })
       .addCase(getAuthData.fulfilled, (state, action) => {

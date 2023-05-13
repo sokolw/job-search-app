@@ -53,7 +53,7 @@ const initState = (): CataloguesState => {
 
 export const getCataloguesData = createAsyncThunk(
   'getCataloguesData',
-  async (arg, { getState, rejectWithValue, dispatch }) => {
+  async (_arg, { getState, rejectWithValue, dispatch }) => {
     const state = getState() as RootState;
     try {
       const response = await superjobApi.getCatalogues();
@@ -89,7 +89,7 @@ const cataloguesSlice = createSlice({
   },
   extraReducers(builder) {
     builder
-      .addCase(getCataloguesData.pending, (state, action) => {
+      .addCase(getCataloguesData.pending, (state, _action) => {
         state.status = 'loading';
       })
       .addCase(getCataloguesData.fulfilled, (state, action) => {

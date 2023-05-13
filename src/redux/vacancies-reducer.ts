@@ -93,7 +93,7 @@ export const getVacanciesData = createAsyncThunk(
 
 export const getFavoriteVacanciesData = createAsyncThunk(
   'getFavoriteVacanciesData',
-  async (arg, { getState, rejectWithValue, dispatch }) => {
+  async (_arg, { getState, rejectWithValue, dispatch }) => {
     const state = getState() as RootState;
     try {
       const vacancyIds = selectFavoriteVacancyIds(state);
@@ -178,7 +178,7 @@ const vacanciesSlice = createSlice({
   extraReducers(builder) {
     builder
       // getVacanciesData
-      .addCase(getVacanciesData.pending, (state, action) => {
+      .addCase(getVacanciesData.pending, (state, _action) => {
         state.status = Status.LOADING;
       })
       .addCase(getVacanciesData.fulfilled, (state, action) => {
@@ -198,7 +198,7 @@ const vacanciesSlice = createSlice({
         state.error = action.error.message;
       })
       // getFavoriteVacanciesData
-      .addCase(getFavoriteVacanciesData.pending, (state, action) => {
+      .addCase(getFavoriteVacanciesData.pending, (state, _action) => {
         state.statusFavoriteVacancies = Status.LOADING;
       })
       .addCase(getFavoriteVacanciesData.fulfilled, (state, action) => {
