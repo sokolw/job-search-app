@@ -26,6 +26,11 @@ export const SearchField = () => {
         onFocus={() => setIsFocus(true)}
         onBlur={() => setIsFocus(false)}
         onInput={(event) => dispatch(setKeyword(event.currentTarget.value))}
+        onKeyDown={(event) => {
+          if (event.code === 'Enter') {
+            handleSearch();
+          }
+        }}
       />
       <PrimaryButton width={83} height={32} content={'Поиск'} callback={handleSearch}></PrimaryButton>
     </div>
