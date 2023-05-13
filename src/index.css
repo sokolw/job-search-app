@@ -10,6 +10,7 @@
   --gray-300: #d5d6dc;
   --gray-500: #acadb9;
   --gray-600: #7b7c88;
+  --gray-900: #343A40;
 }
 
 * {
@@ -58,6 +59,12 @@
   font-family: 'Roboto';
   src: url('./assets/fonts/Roboto-Regular.ttf');
   font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./assets/fonts/OpenSans-SemiBold.ttf');
+  font-weight: 600;
 }
 
 .wrapper {
