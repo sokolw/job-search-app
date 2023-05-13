@@ -15,6 +15,7 @@ export const PrimaryButton = (props: PrimaryButtonType) => {
 
   return (
     <button
+      data-elem='search-button'
       className={`${styles.primaryButton} ${isHover && !isClick ? styles.primaryButton_hover : ''} ${
         isHover && isClick ? styles.primaryButton_click : ''
       }`}

@@ -78,11 +78,13 @@ export const FilterContainer = () => {
           currValue={paymentFrom}
           callback={handlerPaymentFrom}
           placeholder='От'
+          dataElem='salary-from-input'
         ></InputNumberWithControls>
         <InputNumberWithControls
           currValue={paymentTo}
           callback={handlerPaymentTo}
           placeholder='До'
+          dataElem='salary-to-input'
         ></InputNumberWithControls>
       </div>
       <PrimaryButton width={275} height={40} content={'Применить'} callback={handlerApplyButton}></PrimaryButton>

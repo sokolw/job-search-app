@@ -19,6 +19,7 @@ export const SearchField = () => {
     <div className={`${styles.searchField} ${isFocus ? styles.searchField_focus : ''}`}>
       <img src={lensImg} alt='lens' />
       <input
+        data-elem='search-input'
         className={styles.searchField__input}
         type='text'
         value={keyword}

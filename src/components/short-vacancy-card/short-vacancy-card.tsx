@@ -37,7 +37,7 @@ export const ShortVacancyCard = ({
 
   if (enableAdditionalStyle) {
     return (
-      <div className={styles.shortVacancyCard}>
+      <div className={styles.shortVacancyCard} data-elem={`vacancy-${id}`}>
         <div className={styles.shortVacancyCard__content}>
           <h2 className={`${styles.shortVacancyCard__title} ${styles.shortVacancyCard__title_additional}`}>{title}</h2>
           <div className={`${styles.shortVacancyCard__description} ${styles.shortVacancyCard__description_additional}`}>
@@ -54,13 +54,13 @@ export const ShortVacancyCard = ({
             <span className={styles.shortVacancyCard__place}>{place}</span>
           </div>
         </div>
-        <SaveButton saved={isFavorite} callback={handleVacancySave}></SaveButton>
+        <SaveButton id={id} saved={isFavorite} callback={handleVacancySave}></SaveButton>
       </div>
     );
   }
 
   return (
-    <div className={styles.shortVacancyCard}>
+    <div className={styles.shortVacancyCard} data-elem={`vacancy-${id}`}>
       <div className={styles.shortVacancyCard__content}>
         <Link className={styles.shortVacancyCard__title} to={`${VACANCY}/${id}`}>
           {title}
@@ -75,7 +75,7 @@ export const ShortVacancyCard = ({
           <span className={styles.shortVacancyCard__place}>{place}</span>
         </div>
       </div>
-      <SaveButton saved={isFavorite} callback={handleVacancySave}></SaveButton>
+      <SaveButton id={id} saved={isFavorite} callback={handleVacancySave}></SaveButton>
     </div>
   );
 };

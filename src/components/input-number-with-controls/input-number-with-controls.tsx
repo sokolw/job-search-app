@@ -5,14 +5,16 @@ type InputNumberWithControlsType = {
   placeholder: string;
   currValue: number;
   callback: (value: number) => void;
+  dataElem: string;
 };
 
 export const InputNumberWithControls = (props: InputNumberWithControlsType) => {
-  const { placeholder, currValue, callback } = props;
+  const { placeholder, currValue, callback, dataElem } = props;
 
   return (
     <div className={styles.inputNumberWithControls}>
       <input
+        data-elem={dataElem}
         className={styles.input}
         type='text'
         autoComplete='off'

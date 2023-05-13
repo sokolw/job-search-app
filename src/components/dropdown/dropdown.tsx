@@ -52,7 +52,11 @@ export const Dropdown = (props: DropdownType) => {
   return (
     <div className={styles.dropdown}>
       <h3 className={styles.dropdown__title}>Отрасль</h3>
-      <div className={`${styles.select} ${isDropdownOpen ? styles.select_active : ''}`} onClick={toggleDropdown}>
+      <div
+        data-elem='industry-select'
+        className={`${styles.select} ${isDropdownOpen ? styles.select_active : ''}`}
+        onClick={toggleDropdown}
+      >
         <div className={styles.select__content}>
           <div className={`${styles.select__value} ${selectedKey > 0 ? styles.select__value_active : ''}`}>
             {selectedTitle}
