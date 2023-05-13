@@ -8,6 +8,7 @@ import {
   resetWithoutKeyword,
   selectWithoutKeyword,
   setCatalogIndustry,
+  setIsSubmitted,
   setPaymentFrom,
   setPaymentTo,
   validateFilter,
@@ -31,6 +32,7 @@ export const FilterContainer = () => {
     }
 
     if (validationErrors.length === 0 && isSubmitted) {
+      dispatch(setIsSubmitted(false));
       dispatch(getVacanciesData({}));
     }
   }, [cataloguesStatus, validationErrors]);
@@ -54,8 +56,6 @@ export const FilterContainer = () => {
   const handlerResetFilterButton = () => {
     dispatch(resetWithoutKeyword());
   };
-
-  console.log(catalogIndustryTitle, catalogIndustryKey, paymentFrom, paymentTo, validationErrors, isSubmitted);
 
   return (
     <div className={styles.filterContainer}>
