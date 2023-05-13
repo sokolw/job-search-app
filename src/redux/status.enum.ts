@@ -4,3 +4,5 @@ export enum Status {
   SUCCEEDED = 'succeeded',
   FAILED = 'failed',
 }
+
+export type StatusType = Status.IDLE | Status.LOADING | Status.SUCCEEDED | Status.FAILED;
