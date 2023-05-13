@@ -51,6 +51,9 @@ const filterSlice = createSlice({
       state.paymentTo = initialState.paymentTo;
       state.isSubmitted = false;
     },
+    setIsSubmitted: (state, action: PayloadAction<boolean>) => {
+      state.isSubmitted = action.payload;
+    },
     validateFilter: (state) => {
       state.validationErrors = [];
       const { paymentFrom, paymentTo } = state;
@@ -66,8 +69,15 @@ const filterSlice = createSlice({
 });
 
 export const filterReducer = filterSlice.reducer;
-export const { setKeyword, setCatalogIndustry, setPaymentFrom, setPaymentTo, resetWithoutKeyword, validateFilter } =
-  filterSlice.actions;
+export const {
+  setKeyword,
+  setCatalogIndustry,
+  setPaymentFrom,
+  setPaymentTo,
+  resetWithoutKeyword,
+  validateFilter,
+  setIsSubmitted,
+} = filterSlice.actions;
 // selectors
 export const selectWithoutKeyword = (state: RootState): Omit<FilterState, 'keyword'> => {
   const { filter } = state;
@@ -86,8 +96,14 @@ export const selectFilterQuery = (state: RootState): QueryVacancies => {
     page: 0,
     published: 1,
     keyword: initialState.keyword !== filter.keyword ? filter.keyword : undefined,
-    payment_from: initialState.paymentFrom !== filter.paymentFrom ? filter.paymentFrom : undefined,
-    payment_to: initialState.paymentTo !== filter.paymentTo ? filter.paymentTo : undefined,
+    payment_from:
+      initialState.paymentFrom !== filter.paymentFrom && filter.validationErrors.length === 0
+        ? filter.paymentFrom
+        : undefined,
+    payment_to:
+      initialState.paymentTo !== filter.paymentTo && filter.validationErrors.length === 0
+        ? filter.paymentTo
+        : undefined,
     catalogues: initialState.catalogIndustryKey !== filter.catalogIndustryKey ? filter.catalogIndustryKey : undefined,
   };
 };
