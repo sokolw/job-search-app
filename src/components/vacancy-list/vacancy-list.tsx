@@ -6,7 +6,7 @@ type VacancyListType = {
   items: CustomVacancy[];
 };
 
-const salaryFormatter = (from: number, to: number, currency: string): string => {
+export const salaryFormatter = (from: number, to: number, currency: string): string => {
   const prefix = `з/п`;
   if (from === 0 && to === 0) {
     return `${prefix} не указана`;
