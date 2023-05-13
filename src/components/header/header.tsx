@@ -4,9 +4,11 @@ import { Logo } from '../logo';
 
 export const Header = () => {
   return (
-    <div className={`wrapper ${styles.header}`}>
-      <Logo externalClassNames={styles.header__logo}></Logo>
-      <Navigation></Navigation>
+    <div className={styles.rootWrapper}>
+      <div className={`wrapper ${styles.header}`}>
+        <Logo externalClassNames={styles.header__logo}></Logo>
+        <Navigation></Navigation>
+      </div>
     </div>
   );
 };

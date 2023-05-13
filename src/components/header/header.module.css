@@ -23,3 +23,7 @@
     left: 0;
   }
 }
+
+.rootWrapper {
+  background-color: var(--white-color);
+}
