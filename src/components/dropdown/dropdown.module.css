@@ -138,3 +138,12 @@
   font-weight: 500;
   color: var(--white-color);
 }
+
+@media (max-width: 400px) {
+  .select {
+    width: 100%;
+  }
+  .dropdown__optionsWrapper {
+    width: 100%;
+  }
+}

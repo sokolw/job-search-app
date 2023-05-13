@@ -5,3 +5,9 @@
   flex-direction: column;
   min-height: calc(100vh - 108px);
 }
+
+@media (max-width: 1024px) {
+  .favoritesPage {
+    padding: 15px;
+  }
+}

@@ -26,3 +26,9 @@
 .navigation__text_active:hover {
   cursor: default;
 }
+
+@media (max-width: 768px) {
+  .navigation {
+    gap: 30px;
+  }
+}

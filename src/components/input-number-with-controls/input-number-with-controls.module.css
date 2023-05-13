@@ -4,6 +4,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
+  width: 275px;
 }
 
 .input {
@@ -61,4 +62,13 @@
 .groupControls__increase:hover,
 .groupControls__decrease:hover {
   cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  .inputNumberWithControls {
+    width: 100%;
+  }
+  .input {
+    width: 100%;
+  }
 }

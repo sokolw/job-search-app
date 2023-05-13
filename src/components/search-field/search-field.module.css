@@ -42,3 +42,9 @@
 .searchField__input:focus {
   outline: none !important;
 }
+
+@media (max-width: 400px) {
+  .searchField__input {
+    width: 250%;
+  }
+}

@@ -98,3 +98,9 @@
   line-height: 19px;
   color: var(--black-color);
 }
+
+@media (max-width: 400px) {
+  .shortVacancyCard {
+    padding: 14px;
+  }
+}

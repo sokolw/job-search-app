@@ -3,6 +3,7 @@
   border-radius: 12px;
   background-color: var(--white-color);
   border: 1px solid var(--gray-200);
+  max-width: 320px;
 }
 
 .filterContainer__titleGroup {
@@ -44,4 +45,16 @@
   font-size: 16px;
   line-height: 19px;
   color: var(--black-color);
+}
+
+@media (max-width: 1024px) {
+  .filterContainer {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .filterContainer {
+    padding: 15px;
+  }
 }

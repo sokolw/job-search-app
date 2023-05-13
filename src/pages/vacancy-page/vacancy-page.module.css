@@ -8,3 +8,9 @@
   flex-direction: column;
   gap: 20px;
 }
+
+@media (max-width: 1024px) {
+  .vacancyPage {
+    padding: 15px;
+  }
+}

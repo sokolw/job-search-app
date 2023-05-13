@@ -13,6 +13,10 @@
   left: 162px;
 }
 
+.rootWrapper {
+  background-color: var(--white-color);
+}
+
 @media (max-width: 1200px) {
   .header {
     justify-content: space-around;
@@ -24,6 +28,9 @@
   }
 }
 
-.rootWrapper {
-  background-color: var(--white-color);
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    gap: 20px;
+  }
 }

@@ -16,3 +16,23 @@
   flex-direction: column;
   gap: 16px;
 }
+
+@media (max-width: 1200px) {
+  .vacancyContainerLayout {
+    padding: 0 76px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .vacancyContainerLayout {
+    padding: 0 36px;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .vacancyContainerLayout {
+    padding: 0 14px;
+  }
+}

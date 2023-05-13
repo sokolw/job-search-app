@@ -22,3 +22,9 @@
 .primaryButton_click {
   background-color: var(--blue-600);
 }
+
+@media (max-width: 400px) {
+  .primaryButton {
+    width: 100% !important;
+  }
+}
