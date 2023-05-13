@@ -1,0 +1,26 @@
+.secondaryButton {
+  background-color: var(--blue-100);
+  border: none;
+  border-radius: 8px;
+  color: var(--blue-600);
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  transition: all 0.3s linear;
+}
+
+.secondaryButton:hover {
+  cursor: pointer;
+}
+
+.secondaryButton_hover {
+  background-color: var(--blue-400);
+  color: var(--gray-900);
+}
+
+.secondaryButton_click {
+  background-color: var(--blue-600);
+  color: var(--black-color);
+}
